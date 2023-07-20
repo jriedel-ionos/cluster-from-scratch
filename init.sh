@@ -25,7 +25,4 @@ echo "1" | sudo tee /proc/sys/net/bridge/bridge-nf-call-iptables
 echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 
-sudo kubeadm init
-
-curl -O https://docs.projectcalico.org/archive/v3.24/manifests/calico.yaml
-kubectl apply -f calico.yaml
+# Now either join a cluster or initialize as control plane via kubeadm init
